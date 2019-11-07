@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <h3>Welcome to verkkokauppa</h3>
-      {<TopFive products={ data.dippaBackend.product }/>}
+      <TopFive products={data.dippaBackend.product}/>
     </div>
   )
 }

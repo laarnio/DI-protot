@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import '../scss/product.scss';
 
-
 const Product = (props) => {
   const imagePath = '/' + props.product.image_path;
   const linkPath = '/products/' + props.product.id;

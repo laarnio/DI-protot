@@ -1,11 +1,11 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import {useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/react-hooks';
 
 export const AddRemoveCartButton = (props) => {
   let mutationQuery;
   let variables = { userID: props.userId, productID: props.productId, amount: props.amount };
-  console.log(props.initialAmount, props.amount, props.initialAmount + props.amount)
+
   if(props.initialAmount + props.amount <= 0) {
     variables = { userID: props.userId, productID: props.productId}
     mutationQuery = REMOVE_PRODUCT_FROM_CART;

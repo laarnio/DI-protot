@@ -7,7 +7,6 @@ import { AddRemoveCartButton } from '../components/AddRemoveCartButton';
 
 
 const ProductPage = (props) => {
-  console.log(props);
   const product = props.data.dippaBackend.product[0];
 
     const CartDetails = (props) => {
@@ -26,7 +25,6 @@ const ProductPage = (props) => {
     }
     
     const SaleInfo = (props) => {
-      console.log(props);
       return (
         <div className="sale-info-container">
           <p>In store: { props.product.Sale_info.in_store }</p>

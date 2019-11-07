@@ -10,7 +10,6 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 `)
   data.dippaBackend.product.forEach(({ id }) => {
-    console.log(id);
     actions.createPage({
       path: `products/${id}`,
       component: path.resolve(`./src/templates/product.js`),
