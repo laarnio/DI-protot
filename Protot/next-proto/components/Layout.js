@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import NavBar from './Navbar';
-import Banner from './banner';
 import '../scss/style.scss';
 import '../scss/bootswatch.scss';
 
@@ -9,7 +8,7 @@ const Layout = (props) => (
     <Head>
       <title>Verkkokauppa</title>
     </Head>
-    {/*<Banner />*/}
+
     <NavBar />
     <div className="main-container">
       <div className="content-container">

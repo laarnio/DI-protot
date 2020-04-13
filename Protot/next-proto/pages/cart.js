@@ -81,9 +81,3 @@ export const GET_PRODUCTS_ON_CART = gql`
   }
 `;
 
-Cart.getInitialProps = async ctx => {
-  const apolloClient = ctx.apolloClient;
-  
-  const result = await apolloClient.query({ query: GET_PRODUCTS_ON_CART, variables: { userID: 1 } } )
-  return await result.data;
-}

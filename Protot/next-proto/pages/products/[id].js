@@ -73,7 +73,7 @@ const AddComment = (props) => {
       }
     ]
   });
-
+  
   let commentInput;
   let titleInput;
   return (
@@ -81,7 +81,7 @@ const AddComment = (props) => {
         <form
           onSubmit={e => {
             e.preventDefault();
-            addComment({ variables: { title: titleInput.value, comment: commentInput.value, productID: this.state.product.id, authorID: 1 } })
+            addComment({ variables: { title: titleInput.value, comment: commentInput.value, productID: props.product.id, authorID: 1 } })
             commentInput.value = '';
             titleInput.value = '';
           }}
@@ -207,4 +207,3 @@ ProductPage.getInitialProps = ctx => {
     });
   
 }
-

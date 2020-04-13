@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
 import Link from 'next/link';
 import TopFive from '../components/TopFive';
+import Product from '../components/Product';
 
 const Index = (props) => (
   <div>

@@ -7,12 +7,7 @@ import '../scss/style.scss';
 const Layout = props => {
   return (
     <div>
-    {/* <Head>
-      <title>Verkkokauppa</title>
-    </Head> */}
-    {/*<Banner />*/}
-    <NavBar />
-    
+    <NavBar /> 
     <div className="main-container">
       <div className="content-container">
         { props.children }  

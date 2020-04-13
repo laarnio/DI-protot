@@ -5,7 +5,7 @@ import ApolloClient from 'apollo-boost';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 
-import NavBar from './components/navbar';
+import Layout from './components/layout';
 import AboutPage from './components/aboutPage';
 import MainPage from './components/mainPage';
 import CartPage from './components/cartPage';
@@ -26,22 +26,17 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <NavBar />
-    
-        <div className="main-container">
-          <div className="content-container">
-            <Switch>
-              <Route exact path="/" component={ MainPage } />
-              <Route path="/about" component={ AboutPage } />
-              <Route path="/cart" component={ CartPage } />
-              <Route exact path="/products" component= { ProductsPage } />
-              <Switch>
-                <Route path="/products/:id" component={ ProductPage } />
-              </Switch>
-            </Switch>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={ MainPage } />
+            <Route path="/about" component={ AboutPage } />
+            <Route path="/cart" component={ CartPage } />
+            <Route exact path="/products" component= { ProductsPage } />
             
-          </div>
-        </div>
+            <Route path="/products/:id" component={ ProductPage } />
+            
+          </Switch>
+        </Layout>
       </Router>
     </ApolloProvider>
   );
